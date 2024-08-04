@@ -54,7 +54,7 @@ export default function HomeLayout({ children }) {
             </div>
             <div className="drawer-side w-0">
                 <label htmlFor="my-drawer" className="drawer-overlay"></label>
-                <ul className="menu bg-base-300 sm:w-80 text-base-content relative w-48 p-4">
+                <ul className="menu w-48 p-4 h-[100%] bg-base-300 sm:w-80 text-base-content relative ">
                     <li className="w-fit absolute  right-2 z-40">
                         <button onClick={hideDrawer}> 
                             <AiFillCloseCircle 
@@ -84,29 +84,30 @@ export default function HomeLayout({ children }) {
                     </li>
 
                     {!isLoggedIn && (
-                        <li className="absolute bottom-4 w-[90%] ">
-                            <div className="w-full flex items-center justify-center">
-                                <button className="btn-primary bg-blue-500 px-4 py-1 font-semibold rounded-md w-full">
-                                    <Link to={"/login"}>Login</Link>
-                                </button>
-                                <button className="btn-secondary bg-stone-50 px-4 py-1 font-semibold rounded-md w-full">
-                                    <Link to={"/signup"}>Signup</Link>
-                                </button>
-                            </div>
-                        </li>
-                    )}
-                    {/* {!isLoggedIn && (
-                        <li className="absolute bottom-4 w-[90%]">
-                            <div className="w-full flex items-center justify-center">
-                                <button className="btn-primary bg-blue-500 px-4 py-1 font-semibold rounded-md w-full">
-                                    <Link to={"/user/profile"}> Profile</Link>
-                                </button>
-                                <button className="btn-secondary bg-stone-50 px-4 py-1 font-semibold rounded-md w-full">
-                                    <Link onClick={handleLogout}>Logout</Link>
-                                </button>
-                            </div>
-                        </li>
-                    )} */}
+                            <li className="absolute bottom-4 w-[90%]">
+                                <div className="w-full flex items-center justify-center">
+                                    <button className='btn-primary bg-blue-500 px-4 py-1 font-semibold rounded-md w-full'>
+                                        <Link to="/login">Login</Link>
+                                    </button>
+                                    <button className='btn-secondary bg-stone-50 px-4 py-1 font-semibold rounded-md w-full'>
+                                        <Link to="/signup">Signup</Link>
+                                    </button>
+                                </div>
+                            </li>
+                        )}
+
+                        {isLoggedIn && (
+                            <li className="absolute bottom-4 w-[90%]">
+                                <div className="w-full flex items-center justify-center">
+                                    <button className='btn-primary bg-blue-500 px-4 py-1 font-semibold rounded-md w-full'>
+                                        <Link to="/user/profile">Profile</Link>
+                                    </button>
+                                    <button className='btn-secondary  bg-stone-50 px-4 py-1 font-semibold rounded-md w-full'>
+                                        <Link onClick={handleLogout}>Logout</Link>
+                                    </button>
+                                </div>
+                            </li>
+                        )}
                 </ul>
 
             </div>
