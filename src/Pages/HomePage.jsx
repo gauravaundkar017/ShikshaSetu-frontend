@@ -37,7 +37,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="w-1/2 flex items-center justify-center ">
-            <img src={HomePageImage} alt="homepage imgae"/>
+            <img src={HomePageImage} alt="homepage imgae" />
         </div>
       </div>
     </HomeLayout>
