@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import HomePageImage from '../Assets/Images/homepagelogo.png'
 import HomeLayout from "../Layouts/HomeLayout";
 export default function HomePage() {
-    console.log('HomePage rendered');
+   
 
   return (
     <HomeLayout>
