@@ -5,7 +5,7 @@ export default function Footer() {
     const year = currentDate.getFullYear();
   return (
     <>
-        <footer className='relative left-0 bottom-0 h-[10vh] py-5 flex flex-col sm:flex-row items-center justify-between text-white bg-gray-700 sm:px-20'>
+        <footer className='relative  -bottom-8 h-[5vh] py-5 flex flex-col sm:flex-row items-center justify-between text-white bg-gray-700 sm:px-20'>
             <section className='text-lg '  >
                 &copy; {year} | All rights reserved
             </section>
